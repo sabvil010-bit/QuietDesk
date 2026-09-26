@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuietDesk — Calm study tools and study-skills guides</title>
+  <meta name="description" content="QuietDesk is a free, calm set of study tools for students: a focus timer, clear guides to Pomodoro, active recall, spaced repetition, Cornell notes and the Feynman technique, a weekly planner and an exam-week checklist. No accounts, no ads.">
+  <meta name="theme-color" content="#F3F1EC">
+  <link rel="canonical" href="https://quietdesk.space/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QuietDesk">
+  <meta property="og:title" content="QuietDesk — A quiet place to study">
+  <meta property="og:description" content="A free focus timer, plain-language study-method guides, a weekly planner and an exam-week checklist. No accounts, no ads, no tracking.">
+  <meta property="og:url" content="https://quietdesk.space/">
+  <meta property="og:image" content="https://quietdesk.space/favicon.svg">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="QuietDesk home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <rect x="6" y="6" width="52" height="52" rx="12" fill="none" stroke="currentColor" stroke-width="3.2"/>
+          <path d="M20 40a12 12 0 0 1 24 0z" fill="#8FA28A"/>
+          <line x1="14" y1="40" x2="50" y2="40" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">QuietDesk</span>
+      </a>
+
+      <a class="status" href="index.html#timer" data-timer-pill>
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-label"><span class="visually-hidden">Focus timer: </span><span data-pill-text>Ready · 25:00</span></span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html#methods">Methods</a></li>
+          <li><a href="index.html#planner">Planner</a></li>
+          <li><a href="index.html#checklist">Exam checklist</a></li>
+          <li><a href="index.html#space">Study space</a></li>
+          <li><a href="index.html#teachers">For teachers</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Calm study tools for students</p>
+          <h1>A quiet place to <em>study.</em></h1>
+          <p class="lede">A focus timer, plain-language guides to study methods that work, a weekly planner and an exam-week checklist. Everything is free, runs in your browser and asks nothing of you except a little attention.</p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#timer">Start a focus session</a>
+            <a class="btn btn-line" href="#methods">Learn the methods</a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>Cost</dt><dd>Free</dd></div>
+            <div><dt>Accounts</dt><dd>None needed</dd></div>
+            <div><dt>Ads</dt><dd>Never</dd></div>
+          </dl>
+        </div>
+
+        <figure class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 560 500" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <defs>
+              <clipPath id="pane">
+                <rect x="96" y="46" width="198" height="248"/>
+              </clipPath>
+            </defs>
+
+            <polygon points="96,294 294,294 486,470 250,470" fill="#D9C7A7" opacity=".32"/>
+
+            <rect x="90" y="40" width="210" height="260" fill="#FAF8F4" stroke="#2A2B2A" stroke-width="1.5"/>
+            <g clip-path="url(#pane)">
+              <circle cx="238" cy="104" r="26" fill="#D9C7A7" opacity=".7"/>
+              <path d="M90 250 C130 222 160 236 196 220 C232 204 262 226 300 212 L300 300 L90 300 Z" fill="#8FA28A" opacity=".35"/>
+              <path d="M90 272 C140 254 190 266 230 252 C260 242 280 252 300 246 L300 300 L90 300 Z" fill="#8FA28A" opacity=".45"/>
+            </g>
+            <line x1="195" y1="40" x2="195" y2="300" stroke="#2A2B2A" stroke-width="1.5"/>
+            <line x1="90" y1="160" x2="300" y2="160" stroke="#2A2B2A" stroke-width="1.5"/>
+            <rect x="82" y="300" width="226" height="6" fill="#F3F1EC" stroke="#2A2B2A" stroke-width="1.5"/>
+
+            <line x1="384" y1="132" x2="524" y2="132" stroke="#2A2B2A" stroke-width="1.5"/>
+            <rect x="396" y="88" width="10" height="44" fill="#D9C7A7" stroke="#2A2B2A" stroke-width="1.2"/>
+            <rect x="408" y="96" width="8" height="36" fill="#F3F1EC" stroke="#2A2B2A" stroke-width="1.2"/>
+            <rect x="418" y="92" width="12" height="40" fill="#8FA28A" stroke="#2A2B2A" stroke-width="1.2"/>
+            <rect x="433" y="104" width="30" height="8" transform="rotate(-18 433 112)" fill="#F3F1EC" stroke="#2A2B2A" stroke-width="1.2"/>
+            <line x1="490" y1="96" x2="518" y2="96" stroke="#2A2B2A" stroke-width="1.5"/>
+            <line x1="490" y1="131" x2="518" y2="131" stroke="#2A2B2A" stroke-width="1.5"/>
+            <path d="M494 97 L514 97 L504 113 L514 130 L494 130 L504 113 Z" fill="#FAF8F4" stroke="#2A2B2A" stroke-width="1.2"/>
+            <path d="M499 130 L509 130 L504 122 Z" fill="#D9C7A7"/>
+            <path d="M498 101 L510 101 L504 110 Z" fill="#D9C7A7"/>
+
+            <g>
+              <path d="M64 420 C60 380 44 350 26 336" fill="none" stroke="#56684F" stroke-width="1.5"/>
+              <path d="M66 420 C66 372 70 330 78 300" fill="none" stroke="#56684F" stroke-width="1.5"/>
+              <path d="M68 420 C74 390 94 368 116 358" fill="none" stroke="#56684F" stroke-width="1.5"/>
+              <ellipse cx="30" cy="338" rx="16" ry="7" transform="rotate(35 30 338)" fill="#8FA28A"/>
+              <ellipse cx="48" cy="362" rx="15" ry="6" transform="rotate(-25 48 362)" fill="#8FA28A"/>
+              <ellipse cx="78" cy="302" rx="7" ry="17" fill="#8FA28A"/>
+              <ellipse cx="70" cy="340" rx="6" ry="15" transform="rotate(-20 70 340)" fill="#8FA28A"/>
+              <ellipse cx="110" cy="360" rx="16" ry="6" transform="rotate(-20 110 360)" fill="#8FA28A"/>
+              <ellipse cx="88" cy="386" rx="14" ry="5.5" transform="rotate(20 88 386)" fill="#8FA28A"/>
+            </g>
+            <path d="M42 420 L90 420 L84 470 L48 470 Z" fill="#F3F1EC" stroke="#2A2B2A" stroke-width="1.5"/>
+            <line x1="44" y1="430" x2="88" y2="430" stroke="#2A2B2A" stroke-width="1"/>
+
+            <path d="M206 398 C204 370 200 344 196 318" fill="none" stroke="#2A2B2A" stroke-width="2"/>
+            <rect x="190" y="314" width="14" height="30" rx="4" transform="rotate(-6 197 329)" fill="#D9C7A7" stroke="#2A2B2A" stroke-width="1.2"/>
+            <rect x="202" y="392" width="62" height="8" rx="2" fill="#D9C7A7" stroke="#2A2B2A" stroke-width="1.2"/>
+            <line x1="210" y1="400" x2="204" y2="470" stroke="#2A2B2A" stroke-width="2"/>
+            <line x1="256" y1="400" x2="262" y2="470" stroke="#2A2B2A" stroke-width="2"/>
+            <line x1="207" y1="438" x2="259" y2="438" stroke="#2A2B2A" stroke-width="1"/>
+
+            <rect x="238" y="330" width="290" height="10" fill="#D9C7A7" stroke="#2A2B2A" stroke-width="1.5"/>
+            <line x1="258" y1="340" x2="252" y2="470" stroke="#2A2B2A" stroke-width="2"/>
+            <line x1="508" y1="340" x2="514" y2="470" stroke="#2A2B2A" stroke-width="2"/>
+            <line x1="262" y1="360" x2="504" y2="360" stroke="#2A2B2A" stroke-width="1"/>
+
+            <polygon points="444,236 494,236 530,330 410,330" fill="#8FA28A" opacity=".16"/>
+            <ellipse cx="438" cy="328" rx="20" ry="3.5" fill="#2A2B2A"/>
+            <line x1="438" y1="326" x2="414" y2="266" stroke="#2A2B2A" stroke-width="2"/>
+            <line x1="414" y1="266" x2="468" y2="222" stroke="#2A2B2A" stroke-width="2"/>
+            <circle cx="414" cy="266" r="3.5" fill="#F3F1EC" stroke="#2A2B2A" stroke-width="1.5"/>
+            <path d="M446 238 C448 222 458 214 469 214 C480 214 490 222 492 238 Z" fill="#2A2B2A"/>
+
+            <rect x="262" y="318" width="44" height="6" fill="#8FA28A" stroke="#2A2B2A" stroke-width="1"/>
+            <rect x="266" y="324" width="40" height="6" fill="#D9C7A7" stroke="#2A2B2A" stroke-width="1"/>
+            <path d="M314 330 L318 322 L352 320 L356 330 Z" fill="#FAF8F4" stroke="#2A2B2A" stroke-width="1.2"/>
+            <path d="M356 330 L360 320 L394 322 L398 330 Z" fill="#FAF8F4" stroke="#2A2B2A" stroke-width="1.2"/>
+            <line x1="324" y1="325" x2="348" y2="324" stroke="#2A2B2A" stroke-width=".8" opacity=".5"/>
+            <line x1="364" y1="324" x2="388" y2="325" stroke="#2A2B2A" stroke-width=".8" opacity=".5"/>
+            <line x1="400" y1="327" x2="420" y2="319" stroke="#2A2B2A" stroke-width="2" stroke-linecap="round"/>
+
+            <rect x="460" y="312" width="20" height="18" rx="2" fill="#F3F1EC" stroke="#2A2B2A" stroke-width="1.2"/>
+            <path d="M480 316 C488 316 488 326 480 326" fill="none" stroke="#2A2B2A" stroke-width="1.2"/>
+            <path class="steam s1" d="M466 304 C462 298 470 294 466 286" fill="none" stroke="#2A2B2A" stroke-width="1" stroke-linecap="round" opacity=".45"/>
+            <path class="steam s2" d="M474 304 C470 298 478 294 474 286" fill="none" stroke="#2A2B2A" stroke-width="1" stroke-linecap="round" opacity=".45"/>
+
+            <line x1="10" y1="470" x2="550" y2="470" stroke="#2A2B2A" stroke-width="1.5"/>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <section class="band" aria-label="About QuietDesk">
+      <div class="wrap band-grid">
+        <p class="band-lead">Studying well isn't about more hours. <em>It's about quieter, better ones.</em></p>
+        <p class="band-body">QuietDesk is a small, free collection of study tools and guides for secondary school and university students, and for the teachers who support them. There are no accounts, no adverts and no streaks to keep up. Open it, set a timer, and get on with the work.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="timer" aria-labelledby="timer-title">
+      <div class="wrap timer-grid">
+        <div class="timer-copy">
+          <p class="eyebrow">Focus timer</p>
+          <h2 id="timer-title">Work for a while, <em>then rest.</em></h2>
+          <p class="section-intro">The classic rhythm is 25 minutes of focused study followed by a 5-minute break, with a longer break after every fourth session. If that doesn't suit you, choose a preset or set your own lengths below.</p>
+
+          <div class="presets" role="group" aria-label="Timer presets">
+            <button type="button" class="chip" data-preset="25,5,15" aria-pressed="true">25 / 5</button>
+            <button type="button" class="chip" data-preset="50,10,20" aria-pressed="false">50 / 10</button>
+            <button type="button" class="chip" data-preset="15,3,10" aria-pressed="false">15 / 3</button>
+          </div>
+
+          <fieldset class="timer-settings">
+            <legend>Custom lengths, in minutes</legend>
+            <div class="settings-row">
+              <label class="num-field">
+                <span>Focus</span>
+                <input type="number" id="len-focus" min="1" max="120" value="25" inputmode="numeric">
+              </label>
+              <label class="num-field">
+                <span>Short break</span>
+                <input type="number" id="len-short" min="1" max="30" value="5" inputmode="numeric">
+              </label>
+              <label class="num-field">
+                <span>Long break</span>
+                <input type="number" id="len-long" min="1" max="60" value="15" inputmode="numeric">
+              </label>
+            </div>
+            <label class="check">
+              <input type="checkbox" id="opt-auto">
+              <span>Start the next session automatically</span>
+            </label>
+            <label class="check">
+              <input type="checkbox" id="opt-chime" checked>
+              <span>Play a soft chime when a session ends</span>
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="timer-card" id="timer-card">
+          <div class="phase-tabs" role="group" aria-label="Session type">
+            <button type="button" class="phase-tab" data-phase="focus" aria-pressed="true">Focus</button>
+            <button type="button" class="phase-tab" data-phase="short" aria-pressed="false">Short break</button>
+            <button type="button" class="phase-tab" data-phase="long" aria-pressed="false">Long break</button>
+          </div>
+
+          <div class="dial">
+            <svg class="dial-ring" viewBox="0 0 220 220" aria-hidden="true">
+              <circle cx="110" cy="110" r="100" fill="none" stroke="rgba(42,43,42,.14)" stroke-width="1.5"/>
+              <circle class="dial-progress" cx="110" cy="110" r="100" fill="none" stroke="#8FA28A" stroke-width="4" stroke-linecap="round" transform="rotate(-90 110 110)"/>
+            </svg>
+            <div class="dial-center">
+              <p class="dial-phase" data-phase-label>Focus</p>
+              <p class="dial-time" role="timer" aria-live="off" data-time>25:00</p>
+              <p class="dial-cycle"><span class="visually-hidden">Sessions in this cycle: </span><span class="cycle-dots" data-cycle aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="visually-hidden" data-cycle-text>0 of 4</span></p>
+            </div>
+          </div>
+
+          <div class="timer-controls">
+            <button type="button" class="btn btn-solid btn-start" data-action="toggle">Start</button>
+            <button type="button" class="btn btn-line" data-action="reset">Reset</button>
+            <button type="button" class="btn btn-line" data-action="skip">Skip</button>
+          </div>
+          <p class="timer-foot">
+            <span data-total>0 focus sessions completed this visit</span>
+            <button type="button" class="link-btn" data-action="fullscreen">Full screen</button>
+          </p>
+          <p class="visually-hidden" aria-live="polite" data-announce></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="methods" aria-labelledby="methods-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Study methods</p>
+          <h2 id="methods-title">Five methods, <em>explained plainly.</em></h2>
+          <p class="section-intro">None of these is magic, and you don't need all of them. Most students do well by combining two: one for managing time and attention, one for actually remembering things.</p>
+        </header>
+
+        <nav class="method-index" aria-label="Methods on this page">
+          <a href="#m-pomodoro"><span>01</span> Pomodoro</a>
+          <a href="#m-recall"><span>02</span> Active recall</a>
+          <a href="#m-spaced"><span>03</span> Spaced repetition</a>
+          <a href="#m-cornell"><span>04</span> Cornell notes</a>
+          <a href="#m-feynman"><span>05</span> Feynman technique</a>
+        </nav>
+
+        <div class="methods">
+          <article class="method" id="m-pomodoro">
+            <header class="method-head">
+              <span class="method-num">01</span>
+              <h3>The Pomodoro Technique</h3>
+              <p class="method-for">For: getting started, and keeping going</p>
+            </header>
+            <div class="method-body">
+              <p>Developed by Francesco Cirillo in the late 1980s and named after a tomato-shaped kitchen timer (<i lang="it">pomodoro</i> is Italian for tomato). You work on a single task for a fixed stretch, then take a short, real break.</p>
+              <h4>How to do it</h4>
+              <ol>
+                <li>Pick one task and write it down.</li>
+                <li>Set a timer for 25 minutes and work only on that task.</li>
+                <li>When it rings, stop and take a 5-minute break away from the screen.</li>
+                <li>After four sessions, take a longer break of 15 to 30 minutes.</li>
+              </ol>
+              <p class="method-note">Why it helps: a short, fixed block makes a big task easier to begin, and regular breaks help you notice when attention is slipping. The 25 minutes is a starting point, not a rule. Adjust it to suit you.</p>
+            </div>
+          </article>
+
+          <article class="method" id="m-recall">
+            <header class="method-head">
+              <span class="method-num">02</span>
+              <h3>Active recall</h3>
+              <p class="method-for">For: remembering what you've learned</p>
+            </header>
+            <div class="method-body">
+              <p>Instead of rereading or highlighting, you close the book and try to bring the information back from memory. Studies of the "testing effect" have repeatedly found that practising retrieval leads to better long-term retention than reviewing the same material again.</p>
+              <h4>How to do it</h4>
+              <ol>
+                <li>Read or listen to a section once, carefully.</li>
+                <li>Close your notes and write down, or say aloud, everything you can remember.</li>
+                <li>Open your notes and check. Mark what you missed or got wrong.</li>
+                <li>Turn the gaps into questions or flashcards and test yourself again later.</li>
+              </ol>
+              <p class="method-note">Why it helps: it feels harder than rereading, and that effort is the point. Rereading makes material feel familiar. Recall shows you what you actually know.</p>
+            </div>
+          </article>
+
+          <article class="method" id="m-spaced">
+            <header class="method-head">
+              <span class="method-num">03</span>
+              <h3>Spaced repetition</h3>
+              <p class="method-for">For: making learning last until the exam</p>
+            </header>
+            <div class="method-body">
+              <p>You review material several times, with longer gaps between each review. This builds on the "spacing effect", first described by the psychologist Hermann Ebbinghaus in the 1880s: we forget quickly after learning something, and each well-timed review slows that forgetting.</p>
+              <h4>How to do it</h4>
+              <ol>
+                <li>Learn the material and test yourself on it the same day.</li>
+                <li>Review it again after about 1 day, then 3 days, then a week, then two weeks.</li>
+                <li>If you get something wrong, bring it back to a shorter gap.</li>
+                <li>Use a paper flashcard box (the Leitner system) or a flashcard app to keep track.</li>
+              </ol>
+              <div class="spacing" role="img" aria-label="Example review schedule: day 0, then days 1, 3, 7, 14 and 30">
+                <span style="--x:0.000">0</span>
+                <span style="--x:0.183">1</span>
+                <span style="--x:0.316">3</span>
+                <span style="--x:0.483">7</span>
+                <span style="--x:0.683">14</span>
+                <span style="--x:1.000">30</span>
+              </div>
+              <p class="spacing-caption">Example review days after first learning the material</p>
+              <p class="method-note">Why it helps: cramming the night before can get you through a test, but most of it is gone a week later. Spacing works best when combined with active recall.</p>
+            </div>
+          </article>
+
+          <article class="method method-wide" id="m-cornell">
+            <header class="method-head">
+              <span class="method-num">04</span>
+              <h3>The Cornell note-taking method</h3>
+              <p class="method-for">For: notes you can actually revise from</p>
+            </header>
+            <div class="method-body">
+              <p>Created by Walter Pauk, an education professor at Cornell University, in the 1950s. You divide a page into three areas, so that every page of notes becomes its own revision sheet.</p>
+              <div class="cornell">
+                <figure class="cornell-figure">
+                  <svg viewBox="0 0 340 440" role="img" aria-labelledby="cornell-title cornell-desc">
+                    <title id="cornell-title">Cornell notes page layout</title>
+                    <desc id="cornell-desc">A page with a title strip at the top, a narrow cue column on the left, a wide notes column on the right and a summary area across the bottom.</desc>
+                    <rect x="1" y="1" width="338" height="438" fill="#FAF8F4" stroke="#2A2B2A" stroke-width="1.5"/>
+                    <line x1="1" y1="44" x2="339" y2="44" stroke="#2A2B2A" stroke-width="1.5"/>
+                    <line x1="102" y1="44" x2="102" y2="352" stroke="#2A2B2A" stroke-width="1.5"/>
+                    <line x1="1" y1="352" x2="339" y2="352" stroke="#2A2B2A" stroke-width="1.5"/>
+                    <text x="14" y="28" font-family="Inter, sans-serif" font-size="11" fill="#4F514D">Topic · Date</text>
+                    <text x="14" y="62" font-family="Inter, sans-serif" font-size="9" letter-spacing="1.2" fill="#4F514D">CUES</text>
+                    <text x="118" y="62" font-family="Inter, sans-serif" font-size="9" letter-spacing="1.2" fill="#4F514D">NOTES</text>
+                    <text x="16" y="372" font-family="Inter, sans-serif" font-size="9" letter-spacing="1.2" fill="#4F514D">SUMMARY</text>
+                    <g stroke="#2A2B2A" stroke-width="1" opacity=".22">
+                      <line x1="118" y1="80" x2="320" y2="80"/><line x1="118" y1="100" x2="300" y2="100"/>
+                      <line x1="130" y1="120" x2="310" y2="120"/><line x1="130" y1="140" x2="280" y2="140"/>
+                      <line x1="118" y1="176" x2="320" y2="176"/><line x1="118" y1="196" x2="290" y2="196"/>
+                      <line x1="130" y1="216" x2="316" y2="216"/><line x1="118" y1="252" x2="320" y2="252"/>
+                      <line x1="118" y1="272" x2="296" y2="272"/><line x1="130" y1="292" x2="306" y2="292"/>
+                      <line x1="130" y1="312" x2="270" y2="312"/>
+                      <line x1="16" y1="386" x2="322" y2="386"/><line x1="16" y1="406" x2="300" y2="406"/>
+                    </g>
+                    <g fill="#8FA28A">
+                      <rect x="14" y="74" width="72" height="8" rx="2"/>
+                      <rect x="14" y="170" width="60" height="8" rx="2"/>
+                      <rect x="14" y="246" width="70" height="8" rx="2"/>
+                    </g>
+                  </svg>
+                  <figcaption>Roughly one third of the width for cues, two thirds for notes, and a strip about a fifth of the page high for the summary.</figcaption>
+                </figure>
+                <dl class="cornell-key">
+                  <div>
+                    <dt>Notes column</dt>
+                    <dd>The large right-hand area. Take notes here during the lesson or while reading: short sentences, abbreviations, diagrams. Leave space between ideas.</dd>
+                  </div>
+                  <div>
+                    <dt>Cue column</dt>
+                    <dd>The narrow left-hand column. After class, write questions and key words that line up with your notes, such as "What causes X?"</dd>
+                  </div>
+                  <div>
+                    <dt>Summary</dt>
+                    <dd>The strip at the bottom. In two or three sentences, write the main idea of the page in your own words.</dd>
+                  </div>
+                </dl>
+              </div>
+              <h4>How to do it: the five Rs</h4>
+              <ol>
+                <li><strong>Record</strong> the lesson in the notes column.</li>
+                <li><strong>Reduce</strong> your notes to questions and key words in the cue column.</li>
+                <li><strong>Recite</strong>: cover the notes column and answer the cues out loud.</li>
+                <li><strong>Reflect</strong> on how the ideas connect, and write the summary.</li>
+                <li><strong>Review</strong> the page regularly, starting with the cues.</li>
+              </ol>
+              <p class="method-note">Why it helps: the cue column turns your notes into a built-in self-test, so Cornell notes combine naturally with active recall.</p>
+            </div>
+          </article>
+
+          <article class="method" id="m-feynman">
+            <header class="method-head">
+              <span class="method-num">05</span>
+              <h3>The Feynman technique</h3>
+              <p class="method-for">For: checking you truly understand something</p>
+            </header>
+            <div class="method-body">
+              <p>Named after the physicist Richard Feynman, who was known for explaining difficult ideas in simple words. The steps below are a popular summary inspired by his approach, rather than a method he wrote down himself.</p>
+              <h4>How to do it</h4>
+              <ol>
+                <li>Write the name of a concept at the top of a blank page.</li>
+                <li>Explain it in plain language, as if teaching a younger student.</li>
+                <li>Wherever you get stuck or reach for jargon, go back to your textbook or notes.</li>
+                <li>Simplify your explanation again, and use an example or analogy.</li>
+              </ol>
+              <p class="method-note">Why it helps: if you can't explain it simply, you've found exactly the part you need to study next. It works especially well for science, maths and any subject built on ideas rather than lists.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="planner" aria-labelledby="planner-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Weekly study planner</p>
+          <h2 id="planner-title">A week, <em>laid out calmly.</em></h2>
+          <p class="section-intro">Click any square to type in it. Keep it realistic: two or three focused blocks a day beat a timetable you'll never follow. Your plan is saved only in this browser, and you can print it.</p>
+        </header>
+
+        <div class="planner-tools">
+          <button type="button" class="btn btn-line btn-small" data-print="planner">Print planner</button>
+          <button type="button" class="btn btn-line btn-small" data-clear="planner">Clear planner</button>
+        </div>
+
+        <div class="planner-scroll" tabindex="0" role="region" aria-label="Weekly planner, scrolls sideways on small screens">
+          <table class="planner" id="planner-table">
+            <caption class="visually-hidden">Weekly study planner. Each cell is editable.</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="visually-hidden">Time of day</span></th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+                <th scope="col">Sun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Before school<small>15–30 min</small></th>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Mon, before school" data-cell="r0d0" data-placeholder="Flashcards: French vocab"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Tue, before school" data-cell="r0d1"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Wed, before school" data-cell="r0d2" data-placeholder="Flashcards: biology terms"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Thu, before school" data-cell="r0d3"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Fri, before school" data-cell="r0d4"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Sat, before school" data-cell="r0d5"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Sun, before school" data-cell="r0d6"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">After school<small>First focus block</small></th>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Mon, after school" data-cell="r1d0" data-placeholder="Maths: practice set, 2 × 25 min"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Tue, after school" data-cell="r1d1" data-placeholder="History: Cornell notes on ch. 4"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Wed, after school" data-cell="r1d2"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Thu, after school" data-cell="r1d3" data-placeholder="Chemistry: past-paper questions"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Fri, after school" data-cell="r1d4"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Sat, after school" data-cell="r1d5" data-placeholder="Longer session: weakest topic"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Sun, after school" data-cell="r1d6"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">Evening<small>Second focus block</small></th>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Mon, evening" data-cell="r2d0"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Tue, evening" data-cell="r2d1" data-placeholder="English: plan essay paragraph"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Wed, evening" data-cell="r2d2" data-placeholder="Physics: Feynman one idea"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Thu, evening" data-cell="r2d3"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Fri, evening" data-cell="r2d4"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Sat, evening" data-cell="r2d5"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Sun, evening" data-cell="r2d6" data-placeholder="Rest"></div></td>
+              </tr>
+              <tr>
+                <th scope="row">Review<small>10 min, recall only</small></th>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Mon, review" data-cell="r3d0" data-placeholder="Cover the cue column, recite"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Tue, review" data-cell="r3d1"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Wed, review" data-cell="r3d2"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Thu, review" data-cell="r3d3"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Fri, review" data-cell="r3d4"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Sat, review" data-cell="r3d5"></div></td>
+                <td><div class="cell" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Sun, review" data-cell="r3d6" data-placeholder="Plan next week"></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="planner-hint">Faint text shows an example. It disappears as soon as you type.</p>
+      </div>
+    </section>
+
+    <section class="section" id="checklist" aria-labelledby="checklist-title">
+      <div class="wrap checklist-grid">
+        <header class="section-head checklist-head">
+          <p class="eyebrow">Exam-week checklist</p>
+          <h2 id="checklist-title">Fewer surprises, <em>calmer mornings.</em></h2>
+          <p class="section-intro">Tick things off as you go. Your ticks are saved in this browser only.</p>
+          <div class="progress" aria-live="polite">
+            <p class="progress-text"><span data-done>0</span> of <span data-total-items>0</span> done</p>
+            <div class="progress-bar" aria-hidden="true"><span data-bar></span></div>
+          </div>
+          <div class="planner-tools">
+            <button type="button" class="btn btn-line btn-small" data-print="checklist">Print checklist</button>
+            <button type="button" class="btn btn-line btn-small" data-clear="checklist">Untick all</button>
+          </div>
+        </header>
+
+        <div class="checklist" id="exam-checklist">
+          <fieldset>
+            <legend>A week before</legend>
+            <label class="tick"><input type="checkbox" data-key="w1"><span>Write down every exam: date, time, room and what to bring.</span></label>
+            <label class="tick"><input type="checkbox" data-key="w2"><span>List the topics for each subject and mark the ones you feel least sure about.</span></label>
+            <label class="tick"><input type="checkbox" data-key="w3"><span>Plan short daily reviews in the planner, weakest topics first.</span></label>
+            <label class="tick"><input type="checkbox" data-key="w4"><span>Do at least one past paper or practice set under timed conditions.</span></label>
+            <label class="tick"><input type="checkbox" data-key="w5"><span>Ask your teacher about anything you still don't understand.</span></label>
+          </fieldset>
+          <fieldset>
+            <legend>The day before</legend>
+            <label class="tick"><input type="checkbox" data-key="d1"><span>Review your cue columns and flashcards, not whole textbooks.</span></label>
+            <label class="tick"><input type="checkbox" data-key="d2"><span>Pack pens, pencils, a ruler, a calculator with working batteries, and a clear water bottle.</span></label>
+            <label class="tick"><input type="checkbox" data-key="d3"><span>Check the start time and how long it takes to get there.</span></label>
+            <label class="tick"><input type="checkbox" data-key="d4"><span>Stop studying in the evening and do something relaxing.</span></label>
+            <label class="tick"><input type="checkbox" data-key="d5"><span>Go to bed at a normal time. Sleep helps memory more than a late cram.</span></label>
+          </fieldset>
+          <fieldset>
+            <legend>On the day</legend>
+            <label class="tick"><input type="checkbox" data-key="e1"><span>Eat breakfast and drink some water.</span></label>
+            <label class="tick"><input type="checkbox" data-key="e2"><span>Arrive early, and leave your phone where the rules say it must go.</span></label>
+            <label class="tick"><input type="checkbox" data-key="e3"><span>Read every question carefully before you start writing.</span></label>
+            <label class="tick"><input type="checkbox" data-key="e4"><span>Divide your time by marks and keep an eye on the clock.</span></label>
+            <label class="tick"><input type="checkbox" data-key="e5"><span>Leave a few minutes at the end to check your answers.</span></label>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="space" aria-labelledby="space-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">A distraction-free study space</p>
+          <h2 id="space-title">Set the room up <em>before you sit down.</em></h2>
+          <p class="section-intro">You don't need a special room. A kitchen table, a library corner or your bedroom desk can all work if a few small things are in place.</p>
+        </header>
+
+        <div class="tips">
+          <article class="tip">
+            <svg class="tip-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="20" y="8" width="24" height="44" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="8" y1="56" x2="56" y2="8" stroke="#52654C" stroke-width="1.5"/>
+            </svg>
+            <h3>Phone in another room</h3>
+            <p>Not face down on the desk. Out of sight. Even a silent phone within reach pulls at your attention. If you need it for a timer, use this page instead.</p>
+          </article>
+          <article class="tip">
+            <svg class="tip-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="8" y="12" width="48" height="36" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="8" y1="20" x2="56" y2="20" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="12" y="14" width="12" height="4" fill="#8FA28A"/>
+              <line x1="24" y1="56" x2="40" y2="56" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <h3>One tab, one task</h3>
+            <p>Close everything you don't need for the current task. Turn off notifications on your computer, or use your device's focus mode, for the length of a session.</p>
+          </article>
+          <article class="tip">
+            <svg class="tip-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="26" r="10" fill="#D9C7A7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M32 6v6M32 40v6M12 26h6M46 26h6M18 12l4 4M42 36l4 4M46 12l-4 4M22 36l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="8" y1="56" x2="56" y2="56" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <h3>Good light</h3>
+            <p>Daylight from the side is ideal. In the evening, use a desk lamp as well as the ceiling light so you're not straining your eyes over the page.</p>
+          </article>
+          <article class="tip">
+            <svg class="tip-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <line x1="6" y1="40" x2="58" y2="40" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="14" y="30" width="16" height="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="36" y="32" width="18" height="2" fill="#8FA28A"/>
+              <line x1="12" y1="40" x2="12" y2="56" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="52" y1="40" x2="52" y2="56" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <h3>A clear surface</h3>
+            <p>Only what this session needs: the book, your notes, a pen, water. Clutter is a list of other things you could be doing.</p>
+          </article>
+          <article class="tip">
+            <svg class="tip-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M14 34a18 18 0 0 1 36 0" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="10" y="34" width="10" height="16" rx="3" fill="#8FA28A" stroke="currentColor" stroke-width="1.5"/>
+              <rect x="44" y="34" width="10" height="16" rx="3" fill="#8FA28A" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+            <h3>Quiet, or steady sound</h3>
+            <p>Silence suits most people. If it's noisy at home, earplugs or steady background sound, like rain or a fan, can help more than music with lyrics.</p>
+          </article>
+          <article class="tip">
+            <svg class="tip-icon" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M22 14h20l-2 40H24z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M23 30h18l-1 24H24z" fill="#8FA28A" opacity=".6"/>
+            </svg>
+            <h3>Water and real breaks</h3>
+            <p>Keep water nearby. In your breaks, stand up, stretch, look out of a window. Scrolling on your phone isn't a break for your brain.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="teachers" aria-labelledby="teachers-title">
+      <div class="wrap teachers-grid">
+        <div>
+          <p class="eyebrow">For teachers</p>
+          <h2 id="teachers-title">Free for <em>classroom use.</em></h2>
+          <p class="teachers-lede">You're welcome to use QuietDesk with your classes, without asking. There's nothing for students to sign up for and nothing to install.</p>
+        </div>
+        <ul class="teachers-list">
+          <li>
+            <h3>Project the timer</h3>
+            <p>Use full-screen mode on the board for silent reading, timed practice or exam rehearsals. The time stays correct even if you switch to another window.</p>
+          </li>
+          <li>
+            <h3>Print and share</h3>
+            <p>The planner, the checklist and the method guides print cleanly. You may copy and share them freely for non-commercial teaching.</p>
+          </li>
+          <li>
+            <h3>Safe for school networks</h3>
+            <p>No accounts, adverts, chat, uploads or tracking. Nothing students type leaves their own device.</p>
+          </li>
+          <li>
+            <h3>Tell us what's missing</h3>
+            <p>Suggestions and corrections are very welcome at <a href="mailto:hello@quietdesk.space">hello@quietdesk.space</a>.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <header class="section-head">
+          <p class="eyebrow">Questions</p>
+          <h2 id="faq-title">Things people <em>usually ask.</em></h2>
+        </header>
+
+        <div class="faq">
+          <details>
+            <summary>Is QuietDesk really free?</summary>
+            <p>Yes. There's no paid version, no trial and no advertising. It's a small, simple site that costs very little to run.</p>
+          </details>
+          <details>
+            <summary>Do I need an account?</summary>
+            <p>No. Nothing on this site asks for your name, email or a password.</p>
+          </details>
+          <details>
+            <summary>Does the timer keep going if I switch tabs?</summary>
+            <p>Yes. It checks the real clock rather than counting seconds, so it stays accurate in the background. Some browsers delay sounds in background tabs, so the chime may arrive a moment late. The time shown in the tab title updates while it runs.</p>
+          </details>
+          <details>
+            <summary>Where are my planner and checklist saved?</summary>
+            <p>Only in your own browser, using its local storage. They aren't sent anywhere. If you use a school computer or clear your browser data, they'll be gone, so print anything you want to keep.</p>
+          </details>
+          <details>
+            <summary>Is 25 minutes the right length?</summary>
+            <p>It's a good place to start. Some people focus better in 50-minute blocks, others in 15. Try a few sessions, notice when your attention drifts, and adjust the lengths to match.</p>
+          </details>
+          <details>
+            <summary>Which method should I start with?</summary>
+            <p>If you struggle to get started, try the Pomodoro timer. If you study a lot but forget it, switch from rereading to active recall and space out your reviews. Those two changes make the biggest difference for most students.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Write to us, <em>quietly.</em></h2>
+        </div>
+        <div class="contact-body">
+          <p>Found a mistake in a guide, have an idea for a new tool, or want to tell us how your class uses QuietDesk? We read every message and reply on weekdays.</p>
+          <a class="contact-mail" href="mailto:hello@quietdesk.space">hello@quietdesk.space</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-label="Closing note">
+      <div class="wrap">
+        <p>Close the other tabs. Start the timer.<br><em>We'll keep it quiet.</em></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="QuietDesk home">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="6" y="6" width="52" height="52" rx="12" fill="none" stroke="currentColor" stroke-width="3.2"/>
+            <path d="M20 40a12 12 0 0 1 24 0z" fill="#8FA28A"/>
+            <line x1="14" y1="40" x2="50" y2="40" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-name">QuietDesk</span>
+        </a>
+        <p>Calm study tools and study-skills guides.<br>Free, with no accounts and no ads.</p>
+      </div>
+      <nav class="footer-col" aria-label="Tools">
+        <h2>Tools</h2>
+        <ul>
+          <li><a href="index.html#timer">Focus timer</a></li>
+          <li><a href="index.html#planner">Weekly planner</a></li>
+          <li><a href="index.html#checklist">Exam checklist</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Guides">
+        <h2>Guides</h2>
+        <ul>
+          <li><a href="index.html#methods">Study methods</a></li>
+          <li><a href="index.html#space">Study space</a></li>
+          <li><a href="index.html#teachers">For teachers</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:hello@quietdesk.space">hello@quietdesk.space</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© 2026 QuietDesk</p>
+      <p><a href="privacy.html">Privacy</a> <span aria-hidden="true">·</span> <a href="terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
